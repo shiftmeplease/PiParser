@@ -1,0 +1,11 @@
+Data Model:
+    id
+    data / path
+    information
+
+Requests:
+    Pagination
+        Filters
+    Approve
+    Decline
+    Remove

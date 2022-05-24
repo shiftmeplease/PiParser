@@ -1,0 +1,6 @@
+dbadmin
+QCwJZmAmFNzUnAXMZpOM
+
+mongodb://dbadmin:QCwJZmAmFNzUnAXMZpOM@22aab55c-f3b9-40d7-beb1-21da1dc677b7.piparser-1763.mongo.a.osc-fr1.scalingo-dbs.com:38082/piparser-1763?replicaSet=piparser-1763-rs0&ssl=true
+
+mongodb://dbadmin:QCwJZmAmFNzUnAXMZpOM@0fe28cdb-9d28-4618-b413-cc8c946b4960.piparser-8519.mongo.a.osc-fr1.scalingo-dbs.com:38091/piparser-8519?replicaSet=piparser-8519-rs0&ssl=true
