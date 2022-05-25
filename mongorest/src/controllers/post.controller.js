@@ -13,6 +13,22 @@ const helloWorld = async (req, res) => {
   res.status(200).send({ hello: 'world' });
 };
 
+const getManyPosts = async (req, res) => {
+  res.status(200).send({ hello: 'world' });
+};
+const getList = async (req, res) => {
+  res.status(200).send({ hello: 'world' });
+};
+const getPost = async (req, res) => {
+  res.status(200).send({ hello: 'world' });
+};
+const deletePost = async (req, res) => {
+  res.status(200).send({ hello: 'world' });
+};
+const updatePost = async (req, res) => {
+  res.status(200).send({ hello: 'world' });
+};
+
 // const getUsers = catchAsync(async (req, res) => {
 //   const filter = pick(req.query, ['name', 'role']);
 //   const options = pick(req.query, ['sortBy', 'limit', 'page']);
@@ -40,7 +56,12 @@ const helloWorld = async (req, res) => {
 
 module.exports = {
   createPost,
-  helloWorld
+  helloWorld,
+  getManyPosts,
+  getList,
+  getPost,
+  deletePost,
+  updatePost,
   //   getUsers,
   //   getUser,
   //   updateUser,

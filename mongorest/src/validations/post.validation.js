@@ -13,8 +13,20 @@ const createPost = {
   }),
 };
 
+//TODO validation
+const getManyPosts = {};
+const getList = {};
+const getPost = {};
+const deletePost = {};
+const updatePost = {};
+
 module.exports = {
   createPost,
+  getManyPosts,
+  getList,
+  getPost,
+  deletePost,
+  updatePost,
 };
 // 'post',
 // {

@@ -23,7 +23,7 @@ module.exports = {
   port: envVars.PORT,
   mongoose: {
     //TODO enable postix back
-    url: envVars.MONGODB_URL + /*(envVars.NODE_ENV === 'test' ? '-test' : '')*/,
+    url: envVars.MONGODB_URL /* + (envVars.NODE_ENV === 'test' ? '-test' : '')*/,
     options: {
       ssl: true,
       sslValidate: true,

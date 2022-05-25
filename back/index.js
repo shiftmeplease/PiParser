@@ -34,8 +34,8 @@ axios
     });
 
     // postPage(storyData);
-    fs.writeFileSync("./stories.html", storiesFiltered.join("\r\n\r\n\r\n"));
-    fs.writeFileSync("./stories.json", JSON.stringify(storyData));
+    // fs.writeFileSync("./stories.html", storiesFiltered.join("\r\n\r\n\r\n"));
+    fs.writeFileSync("./stories.json", JSON.stringify(storyData, null, "\t"));
     // console.log(response);
   })
   .catch(function (error) {
@@ -60,10 +60,7 @@ function cutStories(ids, data) {
     const start = `<!--story_${id}_start-->`;
     const end = `<!--story_${id}_end-->`;
 
-    return data.substring(
-      data.indexOf(start),
-      data.lastIndexOf(end) + end.length
-    );
+    return data.substring(data.indexOf(start), data.lastIndexOf(end) + end.length);
   });
   return results;
 }
@@ -73,13 +70,12 @@ function extractData(story) {
   const dateRe = /data-timestamp="(.*?)"/;
   const dateHintRe = /datetime="(.*?)"/;
   const communityRe = /<span class="story__community-name">(.*?)<\/span>/;
-  const titleRe =
-    /<a href="(.*?)" target="_blank"  class="story__title-link">(.*?)<\/a>/;
+  const titleRe = /<a href="(.*?)" target="_blank"  class="story__title-link">(.*?)<\/a>/;
   const imageLinkRe = /data-large-image="(.*?)"/;
   const dataTag = /data-tag="(.*?)"/g;
 
   const rating = story.match(ratingRe)[1];
-  const date = story.match(dateRe)[1];
+  const date = new Date(+(story.match(dateRe)[1] + "000"));
   const dateHint = story.match(dateHintRe)[1];
   let community;
   if (communityRe.test(story)) {
@@ -106,8 +102,8 @@ function postPage(storyData) {
       {
         url: "https://cs14.pikabu.ru/post_img/big/2022/04/19/9/1650378635174492040.jpg",
       },
-      { caption: "Your caption" }
-    )
+      { caption: "Your caption" },
+    ),
   );
   bot.launch();
   storyData.map((v) => {

@@ -6,28 +6,28 @@ const postController = require('../../controllers/post.controller');
 
 const router = express.Router();
 
+const enableValidation = false;
+
 router
   .route('/')
-  .post(validate(postValidation.createPost), postController.createPost)//+
+  .post(enableValidation ? validate(postValidation.createPost) : null, postController.createPost) //+
   .get(postController.helloWorld);
 
 //Many on clientside isnt good
 router
-//id=1|id=1&id=2...
-.route("/?\\?((id=\\d+)|&)+")
-.post(validate(postValidation.getManyPosts), postController.getManyPosts)
+  //id=1|id=1&id=2...
+  .route('/?\\?((id=\\d+)|&)+')
+  .post(enableValidation ? validate(postValidation.getManyPosts) : null, postController.getManyPosts);
 
-router
-  .route("/?\\?_end=\\d+(.?*)")
-  .get(validate(postValidation.getList), postController.getList)
+router.route('/?\\?_end=\\d+(.?*)').get(enableValidation ? validate(postValidation.getList) : null, postController.getList);
 
 router
   .route('/:postId')
-  .get(validate(postValidation.getPost), postController.getPost)
-  .delete(validate(postValidation.deletePost), postController.deletePost)
-  .patch(validate(postValidation.updatePost), postController.updatePost);
+  .get(enableValidation ? validate(postValidation.getPost) : null, postController.getPost)
+  .delete(enableValidation ? validate(postValidation.deletePost) : null, postController.deletePost)
+  .patch(enableValidation ? validate(postValidation.updatePost) : null, postController.updatePost);
 
-  //TODO custom request handler
+//TODO custom request handler
 
 //   .get(validate(postValidation.getPosts), postController.getPosts);
 
