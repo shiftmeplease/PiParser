@@ -8,7 +8,6 @@ mongoose
   .connect(config.mongoose.url, config.mongoose.options)
   .then(() => {
     logger.info('Connected to MongoDB');
-    // console.log('Connected');
     server = app.listen(config.port, () => {
       logger.info(`Listening to port ${config.port}`);
     });

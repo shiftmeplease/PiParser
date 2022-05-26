@@ -13,9 +13,14 @@ const helloWorld = async (req, res) => {
   res.status(200).send({ hello: 'world' });
 };
 
-const getManyPosts = async (req, res) => {
+const getManyPosts = catchAsync(async (req, res) => {
+  //get all ids in req path
+  await postService.findIds(req.body);
+
+  //no content if not found
   res.status(200).send({ hello: 'world' });
-};
+});
+
 const getList = async (req, res) => {
   res.status(200).send({ hello: 'world' });
 };

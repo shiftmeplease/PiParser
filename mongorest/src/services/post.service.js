@@ -9,6 +9,17 @@ const createPost = async (postBody) => {
   return Post.create(postBody);
 };
 
+const findIds = async (ids) => {
+  ids = [1];
+  const cursor = await Post.find({}).sort({ createdAt: 'desc' }).cursor();
+  // const { cursor } = query;
+  for (let doc = await cursor.next(); doc != null; doc = await cursor.next()) {
+    console.log(doc);
+  }
+  return {};
+};
+
 module.exports = {
   createPost,
+  findIds,
 };

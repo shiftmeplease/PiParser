@@ -1,31 +1,32 @@
 const express = require('express');
 const auth = require('../../middlewares/auth');
-const validate = require('../../middlewares/validate');
+const { validate } = require('../../middlewares/validate');
 const postValidation = require('../../validations/post.validation');
 const postController = require('../../controllers/post.controller');
 
 const router = express.Router();
 
-const enableValidation = false;
+const validateBool = false;
 
 router
   .route('/')
-  .post(enableValidation ? validate(postValidation.createPost) : null, postController.createPost) //+
+  .post(validate(postValidation.createPost, validateBool), postController.createPost) //+
   .get(postController.helloWorld);
 
 //Many on clientside isnt good
 router
   //id=1|id=1&id=2...
-  .route('/?\\?((id=\\d+)|&)+')
-  .post(enableValidation ? validate(postValidation.getManyPosts) : null, postController.getManyPosts);
+  .route('/?\\?((id=\d+)|&)+')
+  // .route('/getMany')
+  .post(validate(postValidation.getManyPosts, validateBool), postController.getManyPosts);
 
-router.route('/?\\?_end=\\d+(.?*)').get(enableValidation ? validate(postValidation.getList) : null, postController.getList);
+router.route('/?\\?_end=\d+(.?*)').get(validate(postValidation.getList, validateBool), postController.getList);
 
 router
   .route('/:postId')
-  .get(enableValidation ? validate(postValidation.getPost) : null, postController.getPost)
-  .delete(enableValidation ? validate(postValidation.deletePost) : null, postController.deletePost)
-  .patch(enableValidation ? validate(postValidation.updatePost) : null, postController.updatePost);
+  .get(validate(postValidation.getPost, validateBool), postController.getPost)
+  .delete(validate(postValidation.deletePost, validateBool), postController.deletePost)
+  .patch(validate(postValidation.updatePost, validateBool), postController.updatePost);
 
 //TODO custom request handler
 
