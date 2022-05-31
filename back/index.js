@@ -13,13 +13,13 @@ const filterimage = "data-large-image";
 
 //TODO video
 
-const id = 1;
+const id = 4;
 axios
   .get(`https://pikabu.ru/?page=${id}`, {
     responseType: "arraybuffer",
     transformResponse: AxiosTransformer,
   })
-  .then(function (response) {
+  .then(async function (response) {
     const storyTest = RegExp(/<!--story_(\d+)_start-->/gm);
     const storiesTest = iterate(storyTest, response.data, 1);
     const stories = cutStories(storiesTest, response.data);
@@ -33,9 +33,12 @@ axios
       return extractData(v);
     });
 
+    for (story of storyData) {
+      await sendToMongo(story);
+    }
     // postPage(storyData);
     // fs.writeFileSync("./stories.html", storiesFiltered.join("\r\n\r\n\r\n"));
-    fs.writeFileSync("./stories.json", JSON.stringify(storyData, null, "\t"));
+    // fs.writeFileSync("./stories.json", JSON.stringify(storyData, null, "\t"));
     // console.log(response);
   })
   .catch(function (error) {
@@ -75,7 +78,7 @@ function extractData(story) {
   const dataTag = /data-tag="(.*?)"/g;
 
   const rating = story.match(ratingRe)[1];
-  const date = new Date(+(story.match(dateRe)[1] + "000"));
+  // const date = new Date(+(story.match(dateRe)[1] + "000")); ??
   const dateHint = story.match(dateHintRe)[1];
   let community;
   if (communityRe.test(story)) {
@@ -87,7 +90,18 @@ function extractData(story) {
   const [_, postURL, title] = story.match(titleRe);
   const imageURL = story.match(imageLinkRe)[1];
 
-  return { rating, date, dateHint, community, postURL, title, imageURL, tags };
+  return {
+    title,
+    type: "image",
+    source: postURL,
+    data: imageURL,
+    information: {
+      community,
+      rating,
+      dateHint,
+      tags,
+    },
+  };
 }
 
 function postPage(storyData) {
@@ -117,3 +131,37 @@ function postPage(storyData) {
   process.once("SIGINT", () => bot.stop("SIGINT"));
   process.once("SIGTERM", () => bot.stop("SIGTERM"));
 }
+
+async function sendToMongo(story) {
+  try {
+    const resp = await axios.post("http://localhost:3000/v1/posts", story);
+
+    console.log(resp.status);
+  } catch (e) {
+    console.log(e, story);
+  }
+}
+// const postSchema = mongoose.Schema(
+//   {
+//     title: { type: String, required: true, trim: true },
+//     type: { type: String, required: true },
+//     source: { type: String, required: true, trim: true },
+//     data: { type: String, required: true, trim: true },
+//     information: {
+//       rating: {
+//         type: Number,
+//         required: true,
+//         default: 0,
+//       },
+//       dateHint: {
+//         type: Date,
+//       },
+//       tags: [{ type: String }],
+//     },
+//     approved: { type: Boolean, default: false },
+//     posted: { type: Boolean, default: false },
+//   },
+//   {
+//     timestamps: true,
+//   },
+// );

@@ -14,15 +14,18 @@ const helloWorld = async (req, res) => {
 };
 
 const getManyPosts = catchAsync(async (req, res) => {
-  //get all ids in req path
-  await postService.findIds(req.body);
+  const posts = await postService.findIds(req.body);
 
   //no content if not found
-  res.status(200).send({ hello: 'world' });
+  res.status(200).send(posts);
 });
 
 const getList = async (req, res) => {
-  res.status(200).send({ hello: 'world' });
+  const posts = await postService.getList(req.body);
+
+  //no content if not found
+  //TODO HEADER x-total-count
+  res.status(200).send(posts);
 };
 const getPost = async (req, res) => {
   res.status(200).send({ hello: 'world' });

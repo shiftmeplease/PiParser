@@ -16,11 +16,11 @@ router
 //Many on clientside isnt good
 router
   //id=1|id=1&id=2...
-  .route('/?\\?((id=\d+)|&)+')
+  .route('/getMany')
   // .route('/getMany')
   .post(validate(postValidation.getManyPosts, validateBool), postController.getManyPosts);
 
-router.route('/?\\?_end=\d+(.?*)').get(validate(postValidation.getList, validateBool), postController.getList);
+router.route('/getList').post(validate(postValidation.getList, validateBool), postController.getList);
 
 router
   .route('/:postId')

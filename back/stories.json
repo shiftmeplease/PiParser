@@ -1,156 +1,102 @@
 [
 	{
-		"rating": "5283",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T15:39:19+03:00",
-		"community": "Twitter",
-		"postURL": "https://pikabu.ru/story/kak_ubrat_nadoedlivogo_menedzhera_9133894",
-		"title": "Как убрать надоедливого менеджера",
-		"imageURL": "https://cs14.pikabu.ru/post_img/big/2022/05/23/8/1653309400115741599.jpg",
-		"tags": [
-			"Юмор",
-			"Скриншот",
-			"Twitter",
-			"Менеджер",
-			"Отдел кадров",
-			"Резюме",
-			"Поиск работы"
-		]
+		"title": "Ж - жадность",
+		"type": "image",
+		"source": "https://pikabu.ru/story/zh__zhadnost_9149075",
+		"data": "https://cs14.pikabu.ru/post_img/2022/05/29/2/1653785100165650056.jpg",
+		"information": {
+			"rating": "5012",
+			"dateHint": "2022-05-29T03:47:36+03:00",
+			"tags": [
+				"Жадность",
+				"Юмор",
+				"Appstore",
+				"Повтор",
+				"Отзыв",
+				"Скриншот"
+			]
+		}
 	},
 	{
-		"rating": "8447",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T20:53:08+03:00",
-		"community": "Коричневый юмор",
-		"postURL": "https://pikabu.ru/story/i_kto_zh_vinovat_to__9134669",
-		"title": "И кто ж виноват то ?",
-		"imageURL": "https://cs14.pikabu.ru/post_img/big/2022/05/23/10/1653328292182678921.jpg",
-		"tags": [
-			"Подслушано",
-			"Комментарии",
-			"Вконтакте",
-			"Скриншот",
-			"Юмор",
-			"Лес",
-			"Фекалии"
-		]
+		"title": "Вопрос ребром",
+		"type": "image",
+		"source": "https://pikabu.ru/story/vopros_rebrom_9148343",
+		"data": "https://cs14.pikabu.ru/post_img/2022/05/28/10/165375788719663739.jpg",
+		"information": {
+			"community": "Юмор для всех и каждого",
+			"rating": "3667",
+			"dateHint": "2022-05-28T20:12:25+03:00",
+			"tags": [
+				"Юмор",
+				"Картинка с текстом",
+				"Жизненно",
+				"Возраст",
+				"Женщины"
+			]
+		}
 	},
 	{
-		"rating": "5672",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T13:59:26+03:00",
-		"community": "Юмор для всех и каждого",
-		"postURL": "https://pikabu.ru/story/vse_grani_obucheniya_9133643",
-		"title": "Все грани обучения",
-		"imageURL": "https://cs12.pikabu.ru/post_img/big/2022/05/23/7/16533035031672668.jpg",
-		"tags": [
-			"Когнитивный диссонанс",
-			"Школа",
-			"Школьники",
-			"Обучение",
-			"Юмор",
-			"Ирония",
-			"Сравнение",
-			"Религия",
-			"Картинка с текстом"
-		]
+		"title": "История знакомства...",
+		"type": "image",
+		"source": "https://pikabu.ru/story/istoriya_znakomstva_9148805",
+		"data": "https://cs12.pikabu.ru/post_img/2022/05/28/12/1653770520251335313.jpg",
+		"information": {
+			"rating": "6092",
+			"dateHint": "2022-05-28T23:44:11+03:00",
+			"tags": [
+				"Знакомства",
+				"Интернет",
+				"Скриншот"
+			]
+		}
 	},
 	{
-		"rating": "5936",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T20:38:15+03:00",
-		"community": "Скриншоты комментов",
-		"postURL": "https://pikabu.ru/story/reshil_problemu_sam_9134625",
-		"title": "Решил проблему сам",
-		"imageURL": "https://cs14.pikabu.ru/post_img/big/2022/05/23/10/1653327399193513319.jpg",
-		"tags": [
-			"Скриншот",
-			"Подслушано",
-			"Злость",
-			"Соседи",
-			"Байка"
-		]
+		"title": "Чистота залог здоровья",
+		"type": "image",
+		"source": "https://pikabu.ru/story/chistota_zalog_zdorovya_9148231",
+		"data": "https://cs14.pikabu.ru/post_img/2022/05/28/10/1653755193147138571.jpg",
+		"information": {
+			"community": "Юмор для всех и каждого",
+			"rating": "2241",
+			"dateHint": "2022-05-28T19:27:30+03:00",
+			"tags": [
+				"Юмор",
+				"Картинка с текстом",
+				"Жизненно"
+			]
+		}
 	},
 	{
-		"rating": "6480",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T21:51:39+03:00",
-		"community": "Скриншоты комментов",
-		"postURL": "https://pikabu.ru/story/kruto_9134801",
-		"title": "Круто",
-		"imageURL": "https://cs14.pikabu.ru/post_img/big/2022/05/23/11/165333165515979935.jpg",
-		"tags": [
-			"Скриншот",
-			"История",
-			"Портрет",
-			"Еда",
-			"Ожирение",
-			"Чердак",
-			"Twitter"
-		]
+		"title": "Ждём 2023 году ремейк",
+		"type": "image",
+		"source": "https://pikabu.ru/story/zhdyom_2023_godu_remeyk_9148614",
+		"data": "https://cs12.pikabu.ru/post_img/big/2022/05/28/11/165376488118794138.jpg",
+		"information": {
+			"rating": "1654",
+			"dateHint": "2022-05-28T22:08:50+03:00",
+			"tags": [
+				"[моё]",
+				"Dead Space",
+				"Юмор",
+				"Картинка с текстом"
+			]
+		}
 	},
 	{
-		"rating": "4649",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T21:13:25+03:00",
-		"postURL": "https://pikabu.ru/story/vashi_stavki_9134711",
-		"title": "Ваши ставки?",
-		"imageURL": "https://cs12.pikabu.ru/post_img/big/2022/05/23/11/1653329549152698270.jpg",
-		"tags": [
-			"Интернет",
-			"Twitter",
-			"Юмор",
-			"Эпидемия",
-			"Обезьянья оспа",
-			"Скриншот",
-			"Игра слов"
-		]
-	},
-	{
-		"rating": "4916",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T18:17:22+03:00",
-		"postURL": "https://pikabu.ru/story/kak_mimoletnoe_videne_9134268",
-		"title": "Как мимолетное виденье...",
-		"imageURL": "https://cs14.pikabu.ru/post_img/big/2022/05/23/9/165331895318911166.jpg",
-		"tags": [
-			"Девушки",
-			"Платье",
-			"Показалось",
-			"Попа",
-			"Парейдолия"
-		]
-	},
-	{
-		"rating": "10837",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T16:29:13+03:00",
-		"postURL": "https://pikabu.ru/story/chi_telega_chi_loshad_9134002",
-		"title": "Чи телега, чи лошадь...",
-		"imageURL": "https://cs12.pikabu.ru/post_img/big/2022/05/23/8/1653312211132666889.jpg",
-		"tags": [
-			"Картинка с текстом",
-			"Россия и Украина",
-			"Владимир Зеленский",
-			"Владимир Путин",
-			"The Times",
-			"Политика",
-			"Юмор",
-			"Мат"
-		]
-	},
-	{
-		"rating": "5472",
-		"date": "2022-05-24T19:57:57.000Z",
-		"dateHint": "2022-05-23T17:24:54+03:00",
-		"postURL": "https://pikabu.ru/story/vremya_9134158",
-		"title": "Время",
-		"imageURL": "https://cs14.pikabu.ru/post_img/big/2022/05/23/9/1653315849115692925.jpg",
-		"tags": [
-			"Время",
-			"Граффити",
-			"Фотография",
-			"Надпись на стене"
-		]
+		"title": "Хорошо придумала",
+		"type": "image",
+		"source": "https://pikabu.ru/story/khorosho_pridumala_9148335",
+		"data": "https://cs12.pikabu.ru/post_img/big/2022/05/28/10/1653757700130150919.jpg",
+		"information": {
+			"community": "Twitter",
+			"rating": "2424",
+			"dateHint": "2022-05-28T20:09:05+03:00",
+			"tags": [
+				"Скриншот",
+				"Twitter",
+				"Картинка с текстом",
+				"ADME"
+			]
+		}
 	}
 ]

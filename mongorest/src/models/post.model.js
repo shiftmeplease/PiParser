@@ -8,6 +8,9 @@ const postSchema = mongoose.Schema(
     source: { type: String, required: true, trim: true },
     data: { type: String, required: true, trim: true },
     information: {
+      community: {
+        type: String,
+      },
       rating: {
         type: Number,
         required: true,
